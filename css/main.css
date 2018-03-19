@@ -66,15 +66,15 @@ a, a:hover {
 /* ~~~~~~~~~~~~~~~~~~~~~~~SPLASH~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #splash {
-    /* background-image: url("../images/splash-image.jpeg"); */
-	/* background-position: center center;
+    background-image: url("../images/new-splash.jpeg");
+	background-position: center center;
 	background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover; */
+    background-size: cover;
     padding: 0;
     position: relative;
     opacity: 0.8;
-    background-color: #333333;
+    /* background-color: #333333; */
  }
 
  #splash .info {
@@ -115,6 +115,14 @@ a, a:hover {
 	margin: 0 auto;
 }
 
+#contact .icons .social {
+	border: 2px solid #333333;
+}
+
+#contact .icons .fa {
+	color: #333333;
+}
+
 .social {
 	height: 50px;
 	width: 50px;
@@ -124,12 +132,12 @@ a, a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: all .5s ease;
 }
 
 .social:hover {
 	background-color: #68c3a3;
 	cursor: pointer;
-	transition: all .5s ease;
 }
 
 .fa {
@@ -147,10 +155,27 @@ nav {
 	display: flex;
 	flex-direction: row;
 	background-color: #fff;
+	border-bottom: 1px solid gray;
 }
 
 nav button {
 	width: 10%;
+	background-color: white;
+	border: none;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-family: 'Monoton', cursive;
+	cursor: pointer;
+	padding-left: 60px;
+	transition: all 400ms ease;
+}
+
+nav button:hover {
+	color: #68c3a3;
+}
+
+nav button:focus {
+	outline: 0;
 }
 
 nav .blank {
@@ -171,12 +196,12 @@ nav li {
     font-weight: 700;
     font-size: 12px;
     padding: 15px;
+    transition: all .5s ease;
 }
 
 nav li:hover {
 	color: #68c3a3;
 	cursor: pointer;
-	transition: all .5s ease;
 }
 
 .sticky {
@@ -278,11 +303,25 @@ nav li:hover {
     border-color: rgba(51, 51, 51, 0.15);
 }
 
+.btn-info:hover {
+	background-color: #4aa0c2;
+	border-color: #4aa0c2;
+}
+
 .btn-primary {
 	background-color: #68c3a3;
     border-color: rgba(51, 51, 51, 0.15);
 }
 
+.btn-primary:hover {
+	background-color: #4eb28f;
+	border-color: #4eb28f;
+}
+
+.btn:focus, .btn:active {
+	outline: 0;
+	box-shadow: none;
+}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~RESUME~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -355,6 +394,7 @@ nav li:hover {
 	right: -14.14px;
 	top: 30%;
 	background-color: #eee;
+	transition: all .5s ease;
 }
 
 .rotated {
@@ -370,12 +410,12 @@ nav li:hover {
 	position: relative;
 	background-color: #eee;
 	border-radius: 10px;
+	transition: all .5s ease;
 }
 
 .timeline-content:hover, .timeline-content:hover .timeline-arrow {
 	background-color: #68c3a3;
 	border-color: #68c3a3;
-	transition: all .5s ease;
 }
 
 .timeline-content:hover a {
@@ -427,7 +467,11 @@ nav li:hover {
 }
 
 #skills .section-divider {
-	background-color: white;
+/* 	background-color: white; */
+}
+
+#skills h3 {
+	padding-bottom: 30px;
 }
 
 .card {
@@ -458,7 +502,7 @@ nav li:hover {
 		margin-bottom: 30px;
 		text-align: center;
 		font-weight: 400;
-		height: 60px;
+		height: 40px;
 }
 
 .card .chart {
@@ -469,9 +513,11 @@ nav li:hover {
 		overflow: hidden;
 }
 
+
 .mini .chart {
 	height: 130px;
 	width: 130px;
+	margin: 0 auto;
 }
 
 .card.bg,
@@ -537,11 +583,155 @@ nav li:hover {
   z-index: 6;
 }
 
+.mini .percent {
+	font-size:  30px;
+}
 
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~PROJECTS~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+#work .container {
+	min-height: 667px;
+}
+
+
+#filter {
+	list-style: none;
+	text-align: center;
+	margin: 0, 0, 35px;
+}
+
+#filter li {
+	display: inline-block;
+	padding-right: 20px;
+	padding-left: 20px;
+	cursor: pointer;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+#filter li a {
+	text-transform: uppercase;
+	color: #68c3a3;
+	font-weight: 300;
+
+}
+
+#filter li.active-filter {
+	background-color: #68c3a3;
+	border-radius: 5px;
+	border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+#filter li.active-filter a {
+	color:  #fff;
+}
+
+.active-filter-hover {
+	background-color: #68c3a3;
+	border-radius: 5px;
+	border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+	color: #fff;
+}
+
+#filter li.active-filter-hover a {
+	color: #fff;
+}
+
+#filter .diamond-timeline {
+	position: absolute;
+	background-color: #68c3a3;
+	bottom: -6px;
+	left: calc(50% - 5px);
+}
+
+.hidden {
+	display: none;
+}
+
+.project {
+	height: 200px;
+	width: 251.13px;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.project-image {
+	height: 100%;
+}
+
+
+.project-overlay {
+	display: block;
+	position: absolute;
+	background-color: rgba(26, 30, 31, 0.85);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.project-links {
+	width: 90px;
+    height: 40px;
+    position: absolute;
+    top: calc(40% - 20px);
+    left: calc(50% - 30px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.project-links .social {
+	border: 2px solid #68c3a3;
+}
+
+.project-links .fa {
+	color: #68c3a3;
+}
+
+.project-links .social:hover .fa{
+	color: #fff;
+	transition: all .5s ease;
+}
+
+.project-info {
+	position: absolute;
+    bottom: -10%;
+    left: 0;
+    background-color: #68c3a3;
+    color: #fff;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.project-info h5 {
+	font-size: 15px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+.project:hover .project-overlay {
+	opacity: .75;
+}
+
+.project:hover .project-links {
+	top: 40%;
+	opacity: 1;
+}
+
+.project:hover .project-info {
+	bottom: 0;
+	opacity: 1;
+}
 
 
 
